@@ -1,3 +1,6 @@
+
+require(sp)
+
 #'
 #' @title Wrapper for coordinates() function from sp package
 #' @description This function is a wrapper for the coordinates() function from the
@@ -18,7 +21,6 @@
 #' @export
 #' 
 
-require(sp)
 coordinatesDS <- function(x,coord){
   
   coordinates(x) <- coord
