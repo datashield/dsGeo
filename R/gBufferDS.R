@@ -12,9 +12,9 @@ require(rgeos)
 #'  Negative values are allowed. Either a numeric vector of length 1 when byid is
 #'  FALSE; if byid is TRUE: of length 1 replicated to the number of input 
 #'  geometries, or of length equal to the number of input geometries
-#' @return SpatialPolygons (or a SpatialPolygonsDataFrame if byid=TRUE and 
+#' @return SpatialPolygons (or a SpatialPolygonsDataFrame if by_id=TRUE and 
 #' input has a data.frame); if negative width(s) lead the object to disappear,
-#' NULL is returned for byid FALSE, and component Polygons objects are dropped if 
+#' NULL is returned for by_id FALSE, and component Polygons objects are dropped if 
 #' empty for byid TRUE; the SpatialPolygonsDataFrame is subsetted by row.names or id 
 #' if given to retain non-empty geometry rows
 #' @author Bishop, T.
