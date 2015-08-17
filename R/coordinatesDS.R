@@ -1,5 +1,4 @@
 
-require(sp)
 
 #'
 #' @title Wrapper for coordinates() function from sp package
@@ -22,7 +21,7 @@ require(sp)
 #' 
 
 coordinatesDS <- function(x,coord){
-  
+  require(sp)
   coordinates(x) <- coord
   output <- x
   return(output)
