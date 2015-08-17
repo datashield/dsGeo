@@ -3,8 +3,15 @@ Maintainer: <datashield@obiba.org>
 Author: <datashield@obiba.org>
 Version: 0.0.1
 License: GPL-3
-Title: DataSHIELD server site base functions
-Description: DataSHIELD server site base functions
+Title: DataSHIELD server side geospatial functions
+Description: DataSHIELD server side geospatial functions
 AggregateMethods: 
-AssignMethods: 
+AssignMethods:
+  SpatialLinesDataFrameDS,
+  coordinatesDS,
+  coordsToLinesDS,
+  gBufferDS,
+  overDS,
+  proj4stringDS,
+  spTransformDS,
 Options: datashield.privacyLevel=5
