@@ -1,4 +1,4 @@
-require(sp)
+
 
 #'
 #' @title Wrapper for SpatialLinesDataFrame() function from sp package
@@ -16,6 +16,8 @@ require(sp)
 #' 
 
 SpatialLinesDataFrameDS <- function(lines, data){
+  
+  require(sp)
   
   output <- SpatialLinesDataFrame(lines, data)
   return(output)

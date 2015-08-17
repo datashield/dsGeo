@@ -1,5 +1,4 @@
-require(sp)
-require(rgdal)
+
 
 #'
 #' @title Wrapper for spTransform() function from sp and rgdal packages
@@ -16,6 +15,9 @@ require(rgdal)
 #' 
 #' 
 spTransformDS <- function(x,projStr){
+  
+  require(sp)
+  require(rgdal)
   
   newStr <- paste0("+init=epsg:",projStr)
   

@@ -23,6 +23,8 @@ require(rgeos)
 
 gBufferDS <- function(input,by_id=FALSE,ip_width){
   
+  require(rgeos)
+  
   temp <- gBuffer(input, byid=by_id, width=ip_width)
   return(temp)
   

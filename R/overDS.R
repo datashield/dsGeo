@@ -1,5 +1,4 @@
-require(sp)
-require(rgeos)
+
 
 #'
 #' @title Wrapper for \code{over()} function from sp and rgeos package
@@ -19,6 +18,9 @@ require(rgeos)
 #' 
 
 overDS <- function(x,y){
+  
+  require(sp)
+  require(rgeos)
   
   temp <- over(x,y,fn=length)
   return(temp)
