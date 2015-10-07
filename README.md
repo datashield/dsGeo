@@ -1,5 +1,6 @@
 # dsGeo
 
+sudo apt-get install libcurl4-gnutls-dev
 sudo apt-get update
 sudo apt-get install libgdal-dev
 sudo apt-get install libproj-dev
