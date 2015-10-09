@@ -31,9 +31,7 @@ Optionally, you can create a 'danger' function on each virtual server that will 
 3. Click Add Method
 4. Choose R script from the drop down
 5. Enter 'danger' for the name
-6. Enter the following code:
-
-```function(x){return(x)}```
+6. Enter the following code ```function(x){return(x)}```
 
 Finally, you need to load the data sets into Opal. The details of this process are beyond the scope of this guide, but you will need the data set that represents each individual's journey, and the data set that represents the fast food outlet locations.
 
