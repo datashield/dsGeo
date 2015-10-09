@@ -46,17 +46,23 @@ As usual, create a DataSHIELD session:
 
 As we are using 2 data sets, we also need to assign this to a symbol on the server side:
 
-```datashield.assign(opals, symbol='D2', value='buses.poll_data')```
+```
+datashield.assign(opals, symbol='D2', value='buses.poll_data')
+```
 
-###Processing the journeys
+### Processing the journeys
 
 Convert the standard data frame D into a SpatialPointsDataFrame:
 
-```ds.coordinates('D',c('Lon','Lat'), newobj='buses')```
+```
+ds.coordinates('D',c('Lon','Lat'), newobj='buses')
+```
 
 If you created a 'danger' function, you can take a look at the new object:
 
-```datashield.aggregate(opals,'danger(buses'))```
+```
+datashield.aggregate(opals,'danger(buses'))
+```
 
 And here is a visualisation of one person's journey:
 
@@ -69,11 +75,15 @@ Set the projection parameter and then convert the projection from GPS to Irish N
 
 Convert the SpatialPointsDataFrame to SpatialLines. The points are grouped by `bus_id`: this is used to define the lines
 
-```ds.coordsToLines('buses3','bus_id','bus_lines')```
+```
+ds.coordsToLines('buses3','bus_id','bus_lines')
+```
 
 If you created a 'danger' function, you can take a look at the new object:
 
-```datashield.aggregate(opals,'danger(buses3'))```
+```
+datashield.aggregate(opals,'danger(buses3'))
+```
 
 And here is a visualisation of the line:
 
@@ -86,7 +96,9 @@ Create a 50m buffer around each journey/line and assign the correct projection
 
 If you created a 'danger' function, you can take a look at the new object:
 
-```datashield.aggregate(opals,'danger(buffer2'))```
+```
+datashield.aggregate(opals,'danger(buffer2'))
+```
 
 And here is a visualisation of the buffer:
 
@@ -102,11 +114,15 @@ Convert the standard data frame to points, set the projection and transform for 
 
 Overlay the buffered journeys and fast food outlets returning a count of the outlets falling inside the buffer - this is the column `poll_id`
 
-```ds.over('buffer2','ffo3','res')```
+```
+ds.over('buffer2','ffo3','res')
+```
 
 If you created a 'danger' function, you can take a look at the new object:
 
-```datashield.aggregate(opals,'danger(res))```
+```
+datashield.aggregate(opals,'danger(res))
+```
 
 And here is a visualisation:
 
@@ -118,18 +134,26 @@ Note that this section needs the latest tbishop branch for dsBase and dsBaseClie
 
 Return all columns in D, made unique by bus_id:
 
-```ds.unique(x='D',f='bus_id')```
+```
+ds.unique(x='D',f='bus_id')
+```
 
 Get rid of columns to keep only bus id and BMI:
 
-```ds.dataframe(x=c('D.unique$bus_id','D.unique$BMI'), newobj='data')```
+```
+ds.dataframe(x=c('D.unique$bus_id','D.unique$BMI'), newobj='data')
+```
 
 Create a new data frame containing the bus_id, count of fast food outlets in the buffer and BMI:
 
-```ds.dataframe(c('D.unique$bus_id','res$poll_id','D.unique$BMI'), newobj='for_reg')```
+```
+ds.dataframe(c('D.unique$bus_id','res$poll_id','D.unique$BMI'), newobj='for_reg')
+```
 
 If you created a 'danger' function, you can take a look at the new object:
 
-```datashield.aggregate(opals,'danger(for_reg))```
+```
+datashield.aggregate(opals,'danger(for_reg))
+```
 
 The data is now ready to do a regression of exposure `res$poll_id` against outcome `D.unique$BMI` which is standard DataSHIELD functionality
