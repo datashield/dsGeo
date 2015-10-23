@@ -4,17 +4,27 @@
 \alias{overDS}
 \title{Wrapper for \code{over()} function from sp and rgeos package}
 \usage{
-overDS(x, y)
+overDS(x, y, retList = FALSE, fun = NULL)
 }
 \arguments{
 \item{x}{geometry (locations) of the queries}
 
 \item{y}{layer from which the geometries or attributes are queried}
+
+\item{retList}{logical; see value}
+
+\item{fun}{optional, a function; see value}
 }
 \value{
-A vector of length length(x) with the (first) index of y for each geometry
-(point, grid cell centre, polygon or lines) in x. If y has attribute data, attribute
-data are returned in a data.frame with number of rows equal to length(x)
+If y is only geometry an object of length length(x). If returnList is
+FALSE, a vector with the (first) index of y for each geometry (point, grid cell
+centre, polygon or lines) in x. if returnList is TRUE, a list of length
+length(x), with list element i the vector of all indices of the geometries in
+ y that correspond to the $i$-th geometry in x.
+If y has attribute data, attribute data are returned. returnList is FALSE, a
+ data.frame with number of rows equal to length(x) is returned, if it is TRUE a
+  list with length(x) elements is returned, with a list element the data.frame
+   elements of all geometries in y that correspond to that element of x.
 }
 \description{
 This function is a wrapper for the \code{over()} function from the
