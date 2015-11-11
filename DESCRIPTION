@@ -12,10 +12,12 @@ Imports:
 AggregateMethods: 
 AssignMethods:
   SpatialLinesDataFrameDS,
+  commuteDS,
   coordinatesDS,
   coordsToLinesDS,
   gBufferDS,
   overDS,
+  overMatchDS,
   proj4stringDS,
   spTransformDS,
 Options: datashield.privacyLevel=5

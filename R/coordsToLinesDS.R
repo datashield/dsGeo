@@ -1,5 +1,3 @@
-
-
 #'
 #' @title Convert groups of points to lines
 #' @description This function converts a SpatialPointsDataFrame object into a
