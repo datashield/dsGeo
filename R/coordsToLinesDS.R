@@ -12,6 +12,7 @@
 #' @return  an object of class SpatialLines, each line having an ID taken from the column
 #' specified by the group variable
 #' @author Bishop, T.
+#' @import sp
 #' @export
 #' 
 

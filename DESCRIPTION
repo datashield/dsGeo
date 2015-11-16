@@ -5,7 +5,7 @@ Version: 0.0.1
 License: GPL-3
 Title: DataSHIELD server side geospatial functions
 Description: DataSHIELD server side geospatial functions
-Imports:
+Depends:
   sp,
   rgdal,
   rgeos
