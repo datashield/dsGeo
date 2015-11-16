@@ -11,13 +11,14 @@
 #' @return object of class "spatial-class" with the proj4string set to the value passed
 #' to the function
 #' @author Bishop, T.
+#' @import sp rgdal
 #' @export
 #' 
 
 proj4stringDS <- function(x,projStr){
   
-  require(sp)
-  require(rgdal)
+  #require(sp)
+  #require(rgdal)
   
   newStr <- paste0("+init=epsg:",projStr)
  

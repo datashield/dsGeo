@@ -11,13 +11,14 @@
 #' @return object of class "spatial-class" with the coordinate system transformed to that
 #' specified in projStr
 #' @author Bishop, T.
+#' @import sp rgdal
 #' @export
 #' 
 #' 
 spTransformDS <- function(x,projStr){
   
-  require(sp)
-  require(rgdal)
+  #require(sp)
+  #require(rgdal)
   
   newStr <- paste0("+init=epsg:",projStr)
   

@@ -17,11 +17,12 @@
 #' set cover the full set of variables in object, an object of class SpatialPoints
 #' is returned
 #' @author Bishop, T.
+#' @import sp
 #' @export
 #' 
 
 coordinatesDS <- function(x,coord){
-  require(sp)
+  #require(sp)
   coordinates(x) <- coord
   output <- x
   return(output)

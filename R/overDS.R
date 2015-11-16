@@ -22,13 +22,14 @@
 #'   list with length(x) elements is returned, with a list element the data.frame
 #'    elements of all geometries in y that correspond to that element of x.
 #' @author Bishop, T.
+#' @import sp rgeos
 #' @export
 #' 
 
 overDS <- function(x, y, retList = FALSE, fun = NULL){
   
-  require(sp)
-  require(rgeos)
+  #require(sp)
+  #require(rgeos)
   
   temp <- over(x, y, returnList=retList, fn=fun)
   return(temp)

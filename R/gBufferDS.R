@@ -18,12 +18,13 @@ require(rgeos)
 #' empty for byid TRUE; the SpatialPolygonsDataFrame is subsetted by row.names or id 
 #' if given to retain non-empty geometry rows
 #' @author Bishop, T.
+#' @import rgeos
 #' @export
 #' 
 
 gBufferDS <- function(input,by_id=FALSE,ip_width){
   
-  require(rgeos)
+  #require(rgeos)
   
   temp <- gBuffer(input, byid=by_id, width=ip_width)
   return(temp)

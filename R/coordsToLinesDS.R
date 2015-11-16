@@ -18,7 +18,7 @@
 
 coordsToLinesDS <- function(coords,group){
   
-  require(sp)
+  #require(sp)
   
   x <- lapply(split(coords, coords[[group]]), 
               function(x,y) Lines(list(Line(coordinates(x))),x[[y]][1L]),y=group)

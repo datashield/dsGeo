@@ -12,12 +12,13 @@
 #'  the number of Lines elements in lines.
 #' @return object of class SpatialLinesDataFrame
 #' @author Bishop, T.
+#' @import sp
 #' @export
 #' 
 
 SpatialLinesDataFrameDS <- function(lines, data){
   
-  require(sp)
+  #require(sp)
   
   output <- SpatialLinesDataFrame(lines, data)
   return(output)
